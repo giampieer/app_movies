@@ -18,12 +18,31 @@ class Home  extends StatefulWidget {
           )
         ],
       ),
-      drawer: new Drawer(),
-      bottomNavigationBar: new BottomNavigationBar(items: _getFooterItems()
-
+      drawer: new Drawer(
+        child: new ListView(
+          children: <Widget>[
+            new DrawerHeader(child: new Material()),
+            new ListTile(
+                title: new Text("Peliculas"),
+                trailing: new Icon(Icons.local_movies)
+            ),
+            new Divider(
+              height: 5.0,
+            ),
+            new ListTile(
+                title: new Text("Television"),
+                trailing: new Icon(Icons.live_tv)
+            ),
+            new ListTile(
+              title: new Text("Cerrar"),
+              trailing: new Icon(Icons.live_tv),
+              onTap: () => Navigator.of(context).pop(),
+            )
+          ],
+        )
       ),
-
-      
+      bottomNavigationBar: new BottomNavigationBar(items: _getFooterItems()
+      ),
     );
   }
   //Creacion de Tabs
