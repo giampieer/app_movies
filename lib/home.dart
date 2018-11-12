@@ -1,10 +1,20 @@
 import 'package:flutter/material.dart';
-
+import 'package:movies_app/common/HttpHandler.dart';
 class Home  extends StatefulWidget {
   @override
   _HomeState createState() => new _HomeState();
   }
   class _HomeState extends State<Home> {
+  @override
+  void initState() {
+    super.initState();
+    _loadJson();
+  }
+  _loadJson() async {
+    String data = await HttpHandler().ListMovies();
+    print(data);
+  }
+
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
