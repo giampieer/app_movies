@@ -11,7 +11,7 @@ class Home  extends StatefulWidget {
     _loadJson();
   }
   _loadJson() async {
-    String data = await HttpHandler().ListMovies();
+    String data = await HttpHandler().fetchMovies();
     print(data);
   }
 
