@@ -1,10 +1,15 @@
+import 'package:movies_app/common/util.dart';
+
 class Media {
   String url;
   String title;
   String gender1;
   String image;
+  //usamos el metodo creado en la clase util.dart
+  String getPosterUrl() =>getMediumPictureUrl(image);
   //ejemplo de u arraya en json
   List<dynamic>genreIds;
+
 
   factory Media(Map jsonMap) {
     return new Media.deserialize(jsonMap);
@@ -16,6 +21,7 @@ class Media {
         url = json["url"].toString(),
         title = json["title"].toString(),
         gender1 = json["gender1"].toString(),
-        image = json["image"].toString(),
-        genreIds = json["genreIds"].toList();
+        image = json["image"].toString();
+
+       // genreIds = json["genreIds"].toList();
 }
