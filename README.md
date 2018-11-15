@@ -1,8 +1,6 @@
-# movies_app
+# MOVIES
 
-A new Flutter application.
+## App Flutter
 
-## Getting Started
-
-For help getting started with Flutter, view our online
-[documentation](https://flutter.io/).
+Developer : Giampieer Mariscal
+github : https://github.com/giampieer/
